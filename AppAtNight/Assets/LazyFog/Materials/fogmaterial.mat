@@ -72,10 +72,10 @@ Material:
     m_Floats:
     - first:
         name: _Alpha
-      second: 0.48295453
+      second: 0.27
     - first:
         name: _AlphaSub
-      second: 0.01136364
+      second: -0.02
     - first:
         name: _BumpScale
       second: 1
@@ -96,7 +96,7 @@ Material:
       second: 0.5
     - first:
         name: _Intensity
-      second: 0.6
+      second: 1.12
     - first:
         name: _Metallic
       second: 0.937
@@ -111,10 +111,10 @@ Material:
       second: 0.02
     - first:
         name: _Pow
-      second: 0.6
+      second: 1.28
     - first:
         name: _Scale
-      second: 2.1590908
+      second: -0.06
     - first:
         name: _SrcBlend
       second: 1
@@ -127,7 +127,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.84090906, g: 0.84090906, b: 0.9, a: 1}
+      second: {r: 1, g: 0.95, b: 0.9, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 0}
