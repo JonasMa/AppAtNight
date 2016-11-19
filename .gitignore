@@ -30,6 +30,6 @@ sysinfo.txt
 *.unitypackage
 
 #Eigene ignores
-/Temp/
-/Library/metadata/
 AppAtNight/Temp/
+AppAtNight/Library/metadata/
+AppAtNight/Library/ShaderCache/
