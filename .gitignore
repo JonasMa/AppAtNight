@@ -28,3 +28,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#Eigene ignores
+/Temp/
+/Library/metadata/
+AppAtNight/Temp/
