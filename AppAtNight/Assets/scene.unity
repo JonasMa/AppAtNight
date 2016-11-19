@@ -462,6 +462,31 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 195.32402
       objectReference: {fileID: 0}
+    - target: {fileID: 198000012756724254, guid: 3895eef9c0017d74da7617e9914e3cae,
+        type: 2}
+      propertyPath: randomSeed
+      value: 842047884
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012756724254, guid: 3895eef9c0017d74da7617e9914e3cae,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012756724254, guid: 3895eef9c0017d74da7617e9914e3cae,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012756724254, guid: 3895eef9c0017d74da7617e9914e3cae,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012756724254, guid: 3895eef9c0017d74da7617e9914e3cae,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key0.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3895eef9c0017d74da7617e9914e3cae, type: 2}
   m_IsPrefabParent: 0
