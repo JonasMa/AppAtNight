@@ -13,6 +13,8 @@ public class SelectPlanet : MonoBehaviour {
     Transform[] planetCenters;
     Transform moveTo;
 
+    bool isGoingIntoPlanet = false; // is getting inversed on (first) click
+
     // Use this for initialization
     void Start ()
     {
@@ -30,7 +32,7 @@ public class SelectPlanet : MonoBehaviour {
 
         if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap)
         {
-            PerformRaycast();
+            //GetToNearestPlanetOrAway();
         }
         
     }
@@ -38,18 +40,35 @@ public class SelectPlanet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonUp("Fire1"))
         {
-            PerformRaycast();
+            Debug.Log("FIRE Button");
+            GetToNearestPlanetOrAway();
         }
 	}
 
-    void PerformRaycast()
+    void ContinueMoveRoute ()
     {
+        GetComponent<MoveAuto>().ContinueAutoMove();
 
-        GetNearestPlanet();
-        return;
+    }
+
+    void GetToNearestPlanetOrAway()
+    {
+        isGoingIntoPlanet = !isGoingIntoPlanet;
+        Debug.Log("isGoingIntoPlanet: " + isGoingIntoPlanet);
+
+        if (isGoingIntoPlanet)
+        {
+            GetNearestPlanet();
+        }
+        else
+        {
+            ContinueMoveRoute();
+        }
+        
         // FIXME dead code yo
+        /*
         Vector3 fwd = Camera.main.transform.TransformDirection(Vector3.forward);
         
 
@@ -59,6 +78,7 @@ public class SelectPlanet : MonoBehaviour {
             
             OnRayHit(hit.collider);
         }
+        */
     }
 
     void GetNearestPlanet()

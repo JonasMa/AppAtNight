@@ -41,7 +41,7 @@ public class SphereManager : MonoBehaviour {
         newPositions = new Vector3[parts.Length];
         newLocalScale = new Vector3();
         oldLocalScale = new Vector3();
-        Explode();
+       // Explode(); // only explode on entry
 
 
     }

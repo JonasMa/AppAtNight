@@ -16,13 +16,21 @@ public class MoveAuto : MonoBehaviour {
     {
         newTarget = planet;
         isMovingInPlanet = true;
+        isMoving = false;
+    }
+
+    public void ContinueAutoMove ()
+    {
+        moveSpeed = 1.5f;
+        isMoving = true;
+        isMovingInPlanet = false;
     }
 
     public void OnCollideWithPlanet ()
     {
-        isMovingInPlanet = false;
-        isMoving = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Inside_Ball_Scene");
+        //isMovingInPlanet = false;
+        //isMoving = true;
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Inside_Ball_Scene");
     }
 
 
@@ -42,6 +50,7 @@ public class MoveAuto : MonoBehaviour {
 
         if (isMovingInPlanet)
         {
+            //Debug.Log("isMovingInPlanet");
             Quaternion lookRotation = Quaternion.LookRotation((newTarget.position - transform.position).normalized);
             transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
 
@@ -50,9 +59,9 @@ public class MoveAuto : MonoBehaviour {
                 isMovingInPlanet = false;
             }
         }
-
         else if (isMoving)
         {
+            //Debug.Log("isMoving");
             Quaternion lookRotation = Quaternion.LookRotation((currentStop - transform.position).normalized);
             transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
 

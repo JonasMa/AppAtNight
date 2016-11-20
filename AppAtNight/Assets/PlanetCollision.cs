@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlanetCollision : MonoBehaviour {
 
+    public Transform insideSphere;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,10 +15,15 @@ public class PlanetCollision : MonoBehaviour {
 	
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Plane").GetComponent<MeshRenderer>().enabled = true;
-        collision.gameObject.GetComponent<MoveAuto>().OnCollideWithPlanet();
+        other.gameObject.GetComponent<MoveAuto>().OnCollideWithPlanet();
+        insideSphere.gameObject.GetComponent<SphereManager>().OpenCloseSphere(true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        insideSphere.gameObject.GetComponent<SphereManager>().OpenCloseSphere(false);
     }
 
 }
