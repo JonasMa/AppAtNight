@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
+  picture: {fileID: 2800000, guid: f47cae8af1c07a84c9ad6e2dfa8b847e, type: 3}
 --- !u!1001 &36191191
 Prefab:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
+  picture: {fileID: 2800000, guid: a8d071c55eb7d884bbacc8839f645f42, type: 3}
 --- !u!1 &36273608 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 181524, guid: 76c5527a13ac58a4494ef594b2b03b75, type: 2}
@@ -812,7 +812,8 @@ MonoBehaviour:
   - {fileID: 124283300}
   - {fileID: 286678818}
   - {fileID: 1905919478}
-  moveSpeed: 1.5
+  normalSpeed: 3
+  moveIntoPlanetSpeed: 10
 --- !u!54 &95015744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -852,7 +853,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraMoveObject: {fileID: 95015740}
-  mouseControls: 1
 --- !u!1 &95337995
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +948,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: -165.037, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &139687615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011778566012, guid: 3895eef9c0017d74da7617e9914e3cae, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4000011778566012, guid: 3895eef9c0017d74da7617e9914e3cae, type: 2}
       propertyPath: m_LocalScale.z
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
+  picture: {fileID: 2800000, guid: 41568f6ef3e88ea4484220318a8c9e8c, type: 3}
 --- !u!1 &246404827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1324,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: -165.037, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &332665161 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 126364, guid: 26e950ddae2da3a4581a7692739c06fc, type: 2}
@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 4d44c7bd523f6c64fb79ade78581b9ec, type: 3}
+  picture: {fileID: 2800000, guid: 60a70b1d0b2b96843af30b76bcf787fe, type: 3}
 --- !u!1001 &398414008
 Prefab:
   m_ObjectHideFlags: 0
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
+  picture: {fileID: 2800000, guid: 291389d668ff0244da66822de519b2e6, type: 3}
 --- !u!1001 &453242464
 Prefab:
   m_ObjectHideFlags: 0
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
+  picture: {fileID: 2800000, guid: 39cd1d72216087f46833335628042018, type: 3}
 --- !u!1 &526887040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
+  picture: {fileID: 2800000, guid: 77f1f75b66e361e43a6f7bddf1787a1b, type: 3}
 --- !u!1001 &573940571
 Prefab:
   m_ObjectHideFlags: 0
@@ -2210,7 +2210,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &654584944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
+  picture: {fileID: 2800000, guid: e3f03a313e694c648ae6ce0207b8d97d, type: 3}
 --- !u!1 &671223381 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a9c5d530bccf05840ae91f7eb769d602, type: 3}
@@ -2566,7 +2566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
+  picture: {fileID: 2800000, guid: 3408321c5484db94cafa4a1b598cdaf0, type: 3}
 --- !u!1001 &724806368
 Prefab:
   m_ObjectHideFlags: 0
@@ -2656,7 +2656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 4d44c7bd523f6c64fb79ade78581b9ec, type: 3}
+  picture: {fileID: 2800000, guid: 955685c7c9e17134fb8244059e60d8e9, type: 3}
 --- !u!1 &727950189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,14 +2708,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pics:
-  - {fileID: 2800000, guid: 4d44c7bd523f6c64fb79ade78581b9ec, type: 3}
-  - {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
-  - {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
-  - {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
-  - {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
-  - {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
-  - {fileID: 2800000, guid: 15581b547118ca24b8ea88d7f913012a, type: 3}
-  - {fileID: 2800000, guid: 6837f4d3ed247134ebe0555134857e85, type: 3}
+  - {fileID: 2800000, guid: e3f03a313e694c648ae6ce0207b8d97d, type: 3}
+  - {fileID: 2800000, guid: ee7207e9ecb93474a9c72921abce7eb2, type: 3}
+  - {fileID: 2800000, guid: 955685c7c9e17134fb8244059e60d8e9, type: 3}
+  - {fileID: 2800000, guid: 62dc1994e1b2e484780a15b5a85cf8ff, type: 3}
+  - {fileID: 2800000, guid: f1fd54adfee49b24ca6f61e9a2cc88fa, type: 3}
+  - {fileID: 2800000, guid: e0c9ada3909ddaa42aedaeaf255adb4c, type: 3}
+  - {fileID: 2800000, guid: cd35e70cbc3cb20459ce70970519d28c, type: 3}
+  - {fileID: 2800000, guid: 3b78522123172584d99e10af6cce8a02, type: 3}
   parts:
   - {fileID: 1522116393}
   - {fileID: 2062684736}
@@ -3112,7 +3112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
+  picture: {fileID: 2800000, guid: 580e5ce8e51f6304385a5ab23b8c6c05, type: 3}
 --- !u!1 &928027906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
+  picture: {fileID: 2800000, guid: 28f11193c4ad50845a3e5aaffeec103b, type: 3}
 --- !u!1001 &942533003
 Prefab:
   m_ObjectHideFlags: 0
@@ -3425,7 +3425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
+  picture: {fileID: 2800000, guid: f1fd54adfee49b24ca6f61e9a2cc88fa, type: 3}
 --- !u!1 &1058043688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,14 +3864,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pics:
-  - {fileID: 2800000, guid: 4d44c7bd523f6c64fb79ade78581b9ec, type: 3}
-  - {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
-  - {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
-  - {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
-  - {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
-  - {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
-  - {fileID: 2800000, guid: 15581b547118ca24b8ea88d7f913012a, type: 3}
-  - {fileID: 2800000, guid: 6837f4d3ed247134ebe0555134857e85, type: 3}
+  - {fileID: 2800000, guid: 580e5ce8e51f6304385a5ab23b8c6c05, type: 3}
+  - {fileID: 2800000, guid: 291389d668ff0244da66822de519b2e6, type: 3}
+  - {fileID: 2800000, guid: 60a70b1d0b2b96843af30b76bcf787fe, type: 3}
+  - {fileID: 2800000, guid: c3fa1d0c4fd7d3c4eaa0398e3a3bd217, type: 3}
+  - {fileID: 2800000, guid: 3408321c5484db94cafa4a1b598cdaf0, type: 3}
+  - {fileID: 2800000, guid: 3bab1ca6b0131fd49b267eb7d60ea66c, type: 3}
+  - {fileID: 2800000, guid: 28f11193c4ad50845a3e5aaffeec103b, type: 3}
+  - {fileID: 2800000, guid: f47cae8af1c07a84c9ad6e2dfa8b847e, type: 3}
   parts:
   - {fileID: 1093173318}
   - {fileID: 246404828}
@@ -4153,14 +4153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pics:
-  - {fileID: 2800000, guid: 4d44c7bd523f6c64fb79ade78581b9ec, type: 3}
-  - {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
-  - {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
-  - {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
-  - {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
-  - {fileID: 2800000, guid: 94b7bea8ef400c341b8d654902797e9d, type: 3}
-  - {fileID: 2800000, guid: 15581b547118ca24b8ea88d7f913012a, type: 3}
-  - {fileID: 2800000, guid: 6837f4d3ed247134ebe0555134857e85, type: 3}
+  - {fileID: 2800000, guid: 39cd1d72216087f46833335628042018, type: 3}
+  - {fileID: 2800000, guid: a8d071c55eb7d884bbacc8839f645f42, type: 3}
+  - {fileID: 2800000, guid: 8326c4378d4002f479466550fd1496b3, type: 3}
+  - {fileID: 2800000, guid: 6107755c8061cbb418ed7c13589d14e3, type: 3}
+  - {fileID: 2800000, guid: 41568f6ef3e88ea4484220318a8c9e8c, type: 3}
+  - {fileID: 2800000, guid: 9535d580c6a204d4fab764763c0bcaea, type: 3}
+  - {fileID: 2800000, guid: 9d14866e4df97b340ac466142d8fb6b6, type: 3}
+  - {fileID: 2800000, guid: 77f1f75b66e361e43a6f7bddf1787a1b, type: 3}
   parts:
   - {fileID: 654584945}
   - {fileID: 1346752817}
@@ -4402,9 +4402,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1316143640}
-  m_Text: 'Planet 4
-
-'
+  m_Text: Taipei
   m_OffsetZ: 0
   m_CharacterSize: 0.24
   m_LineSpacing: 1
@@ -4748,7 +4746,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1479157737}
   m_LocalRotation: {x: -0, y: -0.6904516, z: -0, w: -0.72337866}
-  m_LocalPosition: {x: 0.38857055, y: 0.9, z: -6.039649}
+  m_LocalPosition: {x: -0.24, y: 0.9, z: -4.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -272.59, z: 0}
   m_Children: []
@@ -4796,7 +4794,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1479157737}
-  m_Text: Blabla
+  m_Text: Hong Kong
   m_OffsetZ: 0
   m_CharacterSize: 0.24
   m_LineSpacing: 1
@@ -5204,7 +5202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: d2879cd9d4c81534d83646328f1c71ee, type: 3}
+  picture: {fileID: 2800000, guid: 3b78522123172584d99e10af6cce8a02, type: 3}
 --- !u!1001 &1596010444
 Prefab:
   m_ObjectHideFlags: 0
@@ -5382,7 +5380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: e30c8e6124185db4989080098094f447, type: 3}
+  picture: {fileID: 2800000, guid: 8326c4378d4002f479466550fd1496b3, type: 3}
 --- !u!1 &1666436488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,7 +5443,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1672024904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,7 +5523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486404, guid: 26e950ddae2da3a4581a7692739c06fc, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 126364, guid: 26e950ddae2da3a4581a7692739c06fc, type: 2}
       propertyPath: m_Name
@@ -5767,7 +5765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 7e4fa923825381e44a65fd717f8a6b0e, type: 3}
+  picture: {fileID: 2800000, guid: ee7207e9ecb93474a9c72921abce7eb2, type: 3}
 --- !u!1 &1790582868
 GameObject:
   m_ObjectHideFlags: 0
@@ -5858,12 +5856,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803593611}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: -1.619486, z: 63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1937007641}
+  m_RootOrder: 3
 --- !u!1 &1825677464
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,7 +6106,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: -102.414, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1927737927 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 124680, guid: ed9db51865b70e24d8a9214f83df5912, type: 2}
@@ -6316,7 +6314,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1955906767}
-  m_Text: Planet 3
+  m_Text: Colombia
   m_OffsetZ: 0
   m_CharacterSize: 0.24
   m_LineSpacing: 1
@@ -6794,7 +6792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a49440823d6d4b8dc8f6b22bbc6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 2bf14d1f1d2e7fe4fb4b15e7357a6fd1, type: 3}
+  picture: {fileID: 2800000, guid: cd35e70cbc3cb20459ce70970519d28c, type: 3}
 --- !u!1 &2043203553
 GameObject:
   m_ObjectHideFlags: 0
@@ -7121,4 +7119,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7

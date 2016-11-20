@@ -9,7 +9,8 @@ public class SphereManager : MonoBehaviour {
     public Transform center;
     public float rotationSpeed = 1.5f;
 
-    int FRAME_DURATION = 50;
+    int FRAME_DURATION_OPEN = 100;
+    int FRAME_DURATION_CLOSE = 50;
     float lerp = 0f;
     bool isLerping = false;
     bool isRotating = false;
@@ -70,11 +71,11 @@ public class SphereManager : MonoBehaviour {
         {
             if (isOpening)
             {
-                lerp += 1f / FRAME_DURATION;
+                lerp += 1f / FRAME_DURATION_OPEN;
             }
             else
             {
-                lerp -= 1f / FRAME_DURATION;
+                lerp -= 1f / FRAME_DURATION_CLOSE;
             }
 
             for (int i = 0; i < parts.Length; i++)

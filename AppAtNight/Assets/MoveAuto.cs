@@ -4,8 +4,10 @@ using System.Collections;
 public class MoveAuto : MonoBehaviour {
 
     public Transform[] stops;
-    public float moveSpeed = 1f;
+    public float normalSpeed = 3f;
+    public float moveIntoPlanetSpeed = 10f;
 
+    float moveSpeed = 1f;
     Vector3 currentStop;
     int currentStopNum = 0;
     bool isMoving = true;
@@ -15,13 +17,14 @@ public class MoveAuto : MonoBehaviour {
     public void MoveToPlanet (Transform planet)
     {
         newTarget = planet;
+        moveSpeed = moveIntoPlanetSpeed;
         isMovingInPlanet = true;
         isMoving = false;
     }
 
     public void ContinueAutoMove ()
     {
-        moveSpeed = 1.5f;
+        moveSpeed = normalSpeed;
         isMoving = true;
         isMovingInPlanet = false;
     }

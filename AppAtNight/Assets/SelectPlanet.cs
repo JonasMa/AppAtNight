@@ -5,7 +5,9 @@ public class SelectPlanet : MonoBehaviour {
 
 
     public GameObject cameraMoveObject;
-    public bool mouseControls = false;
+    bool mouseControls = true;
+
+    bool[] visitedPlanets = { false, false, false, false };
 
     static readonly string[] PLANET_CENTER_NAMES = { "planet1_center", "planet2_center", "planet3_center", "planet4_center" };
     static readonly string[] PLANET_NAMES = { "Planet1", "Planet2" };
@@ -19,6 +21,10 @@ public class SelectPlanet : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+
+#if UNITY_ANDROID
+        mouseControls = false;
+#endif
         OVRTouchpad.Create();
         OVRTouchpad.TouchHandler += HandleTouchHandler;
         planetCenters = new Transform[]{ GameObject.Find(PLANET_CENTER_NAMES[0]).transform, 
@@ -86,20 +92,27 @@ public class SelectPlanet : MonoBehaviour {
     void GetNearestPlanet()
     {
         float[] distances = new float[planetCenters.Length];
-        for(int i=0; i< planetCenters.Length; i++)
+        for (int i = 0; i < planetCenters.Length; i++)
         {
-            distances[i] = Vector3.Distance(transform.position, planetCenters[i].position);
+            if (planetCenters[i] != null)
+            {
+                distances[i] = Vector3.Distance(transform.position, planetCenters[i].position);
+            }
+            else distances[i] = 1000f;
         }
 
         float min = Mathf.Min(distances);
 
         for(int i=0; i<distances.Length; i++)
         {
-            if(distances[i] == min)
+            if(distances[i] == min
+                && visitedPlanets[i] == false)
             {
                 MoveAuto move = GetComponent<MoveAuto>();
                 move.MoveToPlanet(planetCenters[i]);
-                move.moveSpeed = 3f;
+                visitedPlanets[i] = true; // this may be obsolete because of HACK below
+                planetCenters[i] = null; // HACK for never visiting planet again
+                return;
             }
         }
     }
