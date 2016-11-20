@@ -9,6 +9,21 @@ public class MoveAuto : MonoBehaviour {
     Vector3 currentStop;
     int currentStopNum = 0;
     bool isMoving = true;
+    Transform newTarget;
+    bool isMovingInPlanet = false;
+
+    public void MoveToPlanet (Transform planet)
+    {
+        newTarget = planet;
+        isMovingInPlanet = true;
+    }
+
+    public void OnCollideWithPlanet ()
+    {
+        isMovingInPlanet = false;
+        isMoving = true;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Inside_Ball_Scene");
+    }
 
 
     // Use this for initialization
@@ -25,9 +40,18 @@ public class MoveAuto : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+        if (isMovingInPlanet)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation((newTarget.position - transform.position).normalized);
+            transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
 
+            if (Vector3.Distance(transform.position, newTarget.position) < 0.02f)
+            {
+                isMovingInPlanet = false;
+            }
+        }
 
-        if (isMoving)
+        else if (isMoving)
         {
             Quaternion lookRotation = Quaternion.LookRotation((currentStop - transform.position).normalized);
             transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
@@ -46,4 +70,6 @@ public class MoveAuto : MonoBehaviour {
             }
         }
     }
+
+    
 }
