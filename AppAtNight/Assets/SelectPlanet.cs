@@ -5,6 +5,7 @@ public class SelectPlanet : MonoBehaviour {
 
 
     public GameObject cameraMoveObject;
+    public bool mouseControls = false;
 
     static readonly string[] PLANET_CENTER_NAMES = { "planet1_center", "planet2_center", "planet3_center", "planet4_center" };
     static readonly string[] PLANET_NAMES = { "Planet1", "Planet2" };
@@ -30,9 +31,10 @@ public class SelectPlanet : MonoBehaviour {
     {
         OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
 
-        if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap)
+        if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap
+            && ! mouseControls)
         {
-            //GetToNearestPlanetOrAway();
+            GetToNearestPlanetOrAway();
         }
         
     }
@@ -40,9 +42,9 @@ public class SelectPlanet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1")
+            && mouseControls)
         {
-            Debug.Log("FIRE Button");
             GetToNearestPlanetOrAway();
         }
 	}
@@ -56,7 +58,7 @@ public class SelectPlanet : MonoBehaviour {
     void GetToNearestPlanetOrAway()
     {
         isGoingIntoPlanet = !isGoingIntoPlanet;
-        Debug.Log("isGoingIntoPlanet: " + isGoingIntoPlanet);
+        //Debug.Log("isGoingIntoPlanet: " + isGoingIntoPlanet);
 
         if (isGoingIntoPlanet)
         {
