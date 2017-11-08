@@ -16,6 +16,8 @@ public class SphereManager : MonoBehaviour {
     bool isRotating = false;
     bool isOpening = true;
 
+    int timeoutCounter = 0;
+
     Vector3[] newPositions;
     Vector3[] oldPositions;
     Vector3 newLocalScale;
@@ -67,7 +69,10 @@ public class SphereManager : MonoBehaviour {
 
     void LerpExplosion()
     {
-        if (isLerping)
+        timeoutCounter++;
+
+        if (isLerping 
+            && timeoutCounter > 25)
         {
             if (isOpening)
             {
@@ -89,6 +94,7 @@ public class SphereManager : MonoBehaviour {
             {
                 isLerping = false;
                 lerp = 0f;
+                timeoutCounter = 0;
             }
         }
 
@@ -113,14 +119,17 @@ public class SphereManager : MonoBehaviour {
     {
         this.isOpening = isOpening;
 
-        if (isOpening)
+        if (isOpening
+            && timeoutCounter > 25)
         {
+            timeoutCounter = 0;
             lerp = 0f;
             isRotating = true;
             Explode();
         }
-        else
+        else if (timeoutCounter > 25)
         {
+            timeoutCounter = 0;
             lerp = 1f;
             isRotating = false;
         }

@@ -14,6 +14,9 @@ public class MoveAuto : MonoBehaviour {
     Transform newTarget;
     bool isMovingInPlanet = false;
 
+
+    bool isMouseControls = true;
+
     public void MoveToPlanet (Transform planet)
     {
         newTarget = planet;
@@ -29,13 +32,6 @@ public class MoveAuto : MonoBehaviour {
         isMovingInPlanet = false;
     }
 
-    public void OnCollideWithPlanet ()
-    {
-        //isMovingInPlanet = false;
-        //isMoving = true;
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Inside_Ball_Scene");
-    }
-
 
     // Use this for initialization
     void Start () {
@@ -43,7 +39,10 @@ public class MoveAuto : MonoBehaviour {
         {
             currentStop = stops[currentStopNum].position;
         }
- 
+
+//#if UNITY_ANDROID
+        isMouseControls = false;
+//#endif
 
     }
     
@@ -57,7 +56,7 @@ public class MoveAuto : MonoBehaviour {
             Quaternion lookRotation = Quaternion.LookRotation((newTarget.position - transform.position).normalized);
             transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
 
-            if (Vector3.Distance(transform.position, newTarget.position) < 0.02f)
+            if (Vector3.Distance(transform.position, newTarget.position) < 0.1f)
             {
                 isMovingInPlanet = false;
             }
@@ -68,7 +67,7 @@ public class MoveAuto : MonoBehaviour {
             Quaternion lookRotation = Quaternion.LookRotation((currentStop - transform.position).normalized);
             transform.position += lookRotation * Vector3.forward * Time.deltaTime * moveSpeed;
 
-            if (Vector3.Distance( transform.position, currentStop) < 0.02f)
+            if (Vector3.Distance( transform.position, currentStop) < 0.1f)
             {
                 currentStopNum++;
                 if (stops.Length > currentStopNum)
@@ -81,7 +80,8 @@ public class MoveAuto : MonoBehaviour {
                 }
             }
         }
+        
     }
 
-    
+
 }

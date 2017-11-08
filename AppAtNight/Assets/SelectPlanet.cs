@@ -7,6 +7,8 @@ public class SelectPlanet : MonoBehaviour {
     public GameObject cameraMoveObject;
     bool mouseControls = true;
 
+    int timeoutCounter = 0;
+
     bool[] visitedPlanets = { false, false, false, false };
 
     static readonly string[] PLANET_CENTER_NAMES = { "planet1_center", "planet2_center", "planet3_center", "planet4_center" };
@@ -40,13 +42,22 @@ public class SelectPlanet : MonoBehaviour {
         if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap
             && ! mouseControls)
         {
-            GetToNearestPlanetOrAway();
+            if (timeoutCounter > 25)
+            {
+                GetToNearestPlanetOrAway();
+                timeoutCounter = 0;
+            }
         }
         
     }
 
-	// Update is called once per frame
-	void Update () {
+    private void FixedUpdate()
+    {
+        timeoutCounter++;
+    }
+
+    // Update is called once per frame
+    void Update () {
         
         if (Input.GetButtonUp("Fire1")
             && mouseControls)

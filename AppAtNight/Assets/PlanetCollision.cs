@@ -17,12 +17,13 @@ public class PlanetCollision : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<MoveAuto>().OnCollideWithPlanet();
+        Debug.Log("onplanetenter");
         insideSphere.gameObject.GetComponent<SphereManager>().OpenCloseSphere(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("onplanetexit");
         insideSphere.gameObject.GetComponent<SphereManager>().OpenCloseSphere(false);
     }
 
